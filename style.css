@@ -1,0 +1,229 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  border: 0.5px solid lightgrey;
+  padding: 0;
+}
+
+header {
+  border: 0.5px solid lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .start {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+header .start > button {
+  border: none;
+  background-color: #f8f8f8;
+}
+header .start > .logo {
+  display: flex;
+  align-items: center;
+}
+header .start > .logo > i {
+  color: red;
+}
+header .start > .logo > .name {
+  font-weight: bold;
+}
+header .start > .logo > .pl {
+  font-size: 0.5rem;
+  margin-bottom: 1rem;
+}
+header .center {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  border: 1px solid lightgrey;
+}
+header .center > #search {
+  width: 85%;
+  padding: 0.7rem;
+  border: none;
+}
+header .center > .search {
+  width: 15%;
+  border: none;
+}
+header .end {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 1rem;
+}
+header .end > * {
+  border: none;
+  background-color: #f8f8f8;
+}
+header .end > .login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  font-weight: bold;
+  padding: 0.7rem;
+  color: #065fd4;
+  border: 1px solid #065fd4;
+  width: 7rem;
+}
+
+#body {
+  display: flex;
+}
+#body > #left-section {
+  width: 20%;
+}
+#body > #left-section > * {
+  border-bottom: 0.5px solid lightgrey;
+  padding-left: 1.7rem;
+}
+#body > #left-section > .link-group ul {
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+#body > #left-section > .link-group li {
+  margin-bottom: 1.5rem;
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+#body > #left-section > .link-group .header {
+  color: gray;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+#body > #left-section > .login-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#body > #left-section > .login-info > p {
+  font-size: 0.9rem;
+}
+#body > #left-section > .login-info > .login {
+  align-self: flex-start;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.login {
+  border: none;
+  background-color: #f8f8f8;
+  color: #065fd4;
+  border: 1px solid #065fd4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  font-weight: bold;
+  padding: 0.7rem;
+  color: #065fd4;
+  border: 1px solid #065fd4;
+  width: 7rem;
+}
+
+#main-section {
+  width: 80%;
+}
+#main-section .buttons {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+}
+#main-section .buttons button {
+  background-color: transparent;
+  padding: 0.3rem 1rem;
+  border: 1px solid lightgray;
+  border-radius: 2rem;
+}
+#main-section .buttons button.active {
+  background-color: #030303;
+  color: white;
+}
+
+.main-movie-section {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 2px solid #ededed;
+}
+.main-movie-section .header {
+  grid-column: span 4;
+}
+.main-movie-section .movie:nth-child(1) > .movie-frame {
+  background-color: #e1bbbb;
+  height: 12rem;
+  width: 100%;
+}
+.main-movie-section .movie:nth-child(2) > .movie-frame {
+  background-color: #e1c6bb;
+  height: 12rem;
+  width: 100%;
+}
+.main-movie-section .movie:nth-child(3) > .movie-frame {
+  background-color: #eeeccc;
+  height: 12rem;
+  width: 100%;
+}
+.main-movie-section .movie:nth-child(4) > .movie-frame {
+  background-color: #d7e1bb;
+  height: 12rem;
+  width: 100%;
+}
+.main-movie-section .movie:nth-child(5) > .movie-frame {
+  background-color: #bbe1ca;
+  height: 12rem;
+  width: 100%;
+}
+.main-movie-section .movie:nth-child(6) > .movie-frame {
+  background-color: #bbdce1;
+  height: 12rem;
+  width: 100%;
+}
+.main-movie-section .movie:nth-child(7) > .movie-frame {
+  background-color: #bcbbe1;
+  height: 12rem;
+  width: 100%;
+}
+.main-movie-section .movie:nth-child(8) > .movie-frame {
+  background-color: #d9bbe1;
+  height: 12rem;
+  width: 100%;
+}
+.main-movie-section .movie > .avatar {
+  float: left;
+}
+.main-movie-section .movie > .avatar * {
+  background-color: lightgrey;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 1rem;
+  border-radius: 2.5rem;
+}
+.main-movie-section .movie-info {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.main-movie-section .movie-info .title {
+  font-weight: bold;
+}
+.main-movie-section .movie-info .info {
+  color: #404040;
+}
+.main-movie-section .movie-info .info .channel-name {
+  padding: 0.3rem 0;
+}/*# sourceMappingURL=style.css.map */

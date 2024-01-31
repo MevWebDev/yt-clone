@@ -1,0 +1,209 @@
+@import '_variables';
+body {
+    font-family: Roboto, Arial, sans-serif; 
+    background-color:$background-color;
+    margin:0;
+    border:0.5px solid lightgrey;
+    padding:0;
+}
+header{
+    border:0.5px solid lightgrey;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    .start{
+        font-size:1.2rem;
+        display:flex;
+        align-items: center;
+        gap:1rem;
+        margin-left:1rem;
+        padding:0.5rem;
+        >button{
+            border:none;
+            background-color: $background-color;
+            
+        }
+        >.logo{
+            display: flex;
+            align-items: center;
+            >i{
+                color:red;
+            }
+            >.name{
+                font-weight: bold;
+            }
+            >.pl{
+                font-size:0.5rem;
+                margin-bottom:1rem;
+            }
+        }
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        width:30%;
+        border: 1px solid lightgrey;
+        >#search{
+            width:85%;
+            padding:0.7rem;
+            border:none;
+        }
+        >.search{
+            width:15%;
+            border:none;
+            
+        }
+    }
+    .end{
+        display: flex;
+        gap:1.5rem;
+        margin-right:1rem;
+        >*{
+            border:none;
+            background-color: $background-color;
+        }
+        >.login{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            gap:10%;
+            font-weight: bold;
+            padding:0.7rem;
+            color:$login-color;
+            border:1px solid  $login-color;
+            width:7rem;
+        }
+    }
+}
+#body{
+    display: flex;
+    >#left-section{
+        >*{
+            border-bottom:0.5px solid lightgrey;
+            padding-left:1.7rem;
+        }
+        
+        width:20%;
+        >.link-group{
+             ul{
+                padding-left:0;
+                margin-top:1.5rem;
+             }
+             li {
+                margin-bottom:1.5rem; 
+                list-style-type: none;
+                display:flex;
+                gap:1rem;
+            }
+            .header{
+                color:gray;
+                padding-top:1rem;
+                font-weight: bold;
+            }
+        }
+        >.login-info{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            >p{
+                font-size:0.9rem;
+            }
+            >.login{
+                align-self:flex-start;
+                width:60%;
+                margin-bottom:1rem;
+            }
+        }
+    }
+}
+.login{
+    border:none;
+    background-color: $background-color;
+    color:$login-color;
+    border:1px solid $login-color;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10%;
+    font-weight: bold;
+    padding:0.7rem;
+    color:$login-color;
+    border:1px solid  $login-color;
+    width:7rem;
+}
+#main-section{
+    width:80%;
+        .buttons{
+            margin-top:1rem;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            gap:1rem;
+            width:80%;
+            button{
+                background-color: transparent;
+                padding:0.3rem 1rem;
+                border:1px solid lightgray;
+                border-radius: 2rem;
+                &.active{
+                    background-color: $header-button;
+                    color:white;
+                }
+            }
+    }
+}
+.main-movie-section{
+    margin-top:1rem; 
+    display:grid;
+    gap:1.5rem;
+    padding:1.5rem;
+    grid-template-columns: repeat(4,1fr);
+    border-bottom: 2px solid lighten($color: lightgray, $amount: 10%);
+    .header{
+        grid-column: span 4;
+    }
+    .movie{
+        $index: 0;
+        @each $color in $movie-colors {
+            $index: $index + 1;
+            &:nth-child(#{$index}) {
+                > .movie-frame {
+                    background-color: $color;
+                    height: 12rem;
+                    width: 100%;
+                }
+            }
+        }
+
+        >.avatar{
+            float:left;
+            *{
+            background-color: lightgrey;
+            width:2.5rem;
+            height:2.5rem;
+            margin:1rem;
+            border-radius: 2.5rem;
+            
+            }
+        }
+    }
+    .movie-info{
+        margin:1rem;
+        display: flex;
+        flex-direction: column;
+        gap:0.5rem;
+        
+        .title{
+            font-weight: bold;
+        }
+        .info{
+            color:darken($color: grey, $amount: 25%);
+            .channel-name{
+                padding:0.3rem 0;
+            }
+        }
+    }
+}
+
+
